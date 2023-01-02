@@ -41,6 +41,7 @@ ___
   $ db.<name_colection>.insert({})
 
   Ejm:
+  
   $ db.products.insert({"name":"laptop1"}) //insert alredy deprecated, instead use insertOne or insertMany
 ```
 
@@ -59,6 +60,7 @@ ___
   $ db.createCollection(<name>)
 
   Ejm:
+
   $ db.createCollection("users")
 ```
 - Eliminar una coleccion
@@ -66,6 +68,7 @@ ___
   $ db.<collection_name>.drop()
 
   Ejm:
+
   $ db.products.drop()
 ```
 - Listar documentos de una coleccion
@@ -73,20 +76,21 @@ ___
   $ db.<collection_name>.find()
 ```
 ___
-## CREATE
+## CREATE: 
 ```console
   $ db.products.insert({"name":"laptop1"})
 ```
-## READ
+## READ: 
 ```console
   $ db.products.find() //si el documento es corto
+
   $ db.products.find().pretty() //si es extenso usamos pretty para verlo mejor
 ```
-## UPDATE
+## UPDATE: 
 ```console
   $ db.products.updateOne({"price":1000},{$set:{"price":99.99}})
 ```
-## DELETE
+## DELETE: 
 ```console
   $ db.products.deleteOne({"price":99.99})
 ```
